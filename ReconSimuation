@@ -1,0 +1,87 @@
+#imports
+import os
+import pandas as pd
+import re
+from difflib import get_close_matches
+from datetime import datetime
+#stuff including difflib, fpdf and fitz was chatGPT helped TODO: cite/document better which was which
+from fpdf import FPDF
+import fitz  
+
+# load internal
+InternalData = pd.read_csv("data/internal_trades.csv")
+
+# Helper to extract trade fields from a confirmation PDF
+def DataExtract(filepath):
+    doc = fitz.open(filepath)
+    text = ""
+    for page in doc:
+        text += page.get_text()
+
+    trade = {}
+
+    # Use regex to extract values from known structure
+    trade['TradeID'] = re.search(r"Trade ID:\s*(\w+)", text).group(1)
+    trade['timestamp'] = re.search(r"Trade Date:\s*([^\n]+)", text).group(1)
+    trade['style'] = re.search(r"Option Style:\s*(\w+)", text).group(1)
+    trade['TypeOption'] = re.search(r"Option Type:\s*(\w+)", text).group(1)
+    trade['symbol'] = re.search(r"Index:\s*(\w+)", text).group(1)
+    trade['quantity'] = int(re.search(r"Number of Options:\s*(\d+)", text).group(1))
+    trade['price'] = float(re.search(r"Strike Price:\s*\$(\d+\.\d+)", text).group(1))
+
+    return trade
+#this is a helper function 
+# find best match in internal data with tolerance
+def InternalMatch(CurrentTrade, tolerance=3):
+    SymbolMatchs = get_close_matches(CurrentTrade['symbol'], InternalData['symbol'].unique(), n=1, cutoff=0.8)
+    if not SymbolMatchs:
+        return None, "No similar symbol found" # as of right now this should not happen!
+
+    MaybeSymbol = SymbolMatchs[0]
+    MaybeMatches = InternalData[
+        (InternalData['symbol'] == MaybeSymbol) &
+        (InternalData['style'] == CurrentTrade['style']) &
+        (InternalData['TypeOption'] == CurrentTrade['TypeOption']) &
+        (abs(InternalData['quantity'] - CurrentTrade['quantity']) <= tolerance) &
+        (abs(InternalData['price'] - CurrentTrade['price']) <= 2.0)
+    ]
+
+    if MaybeMatches.empty:
+        return None, "No match within tolerance"
+    return MaybeMatches.iloc[0].to_dict(), "Matched"
+
+# MAIN: match all confirmation PDFs
+def MatchConfirm(ConfirmFolder="confirmations/external"):
+    results = []
+    for filename in os.listdir(ConfirmFolder):
+        if not filename.endswith(".pdf"):
+            continue
+
+        filepath = os.path.join(ConfirmFolder, filename)
+        try:
+            extracted = DataExtract(filepath)
+            match, status = InternalMatch(extracted)
+            results.append({
+                "filename": filename,
+                "TradeID": extracted["TradeID"],
+                "symbol": extracted["symbol"],
+                "matched_symbol": match['symbol'] if match else None,
+                "status": status
+            })
+        except Exception as e:
+            results.append({
+                "filename": filename,
+                "TradeID": "N/A",
+                "symbol": "N/A",
+                "matched_symbol": None,
+                "status": f"Error: {e}"
+            })
+
+    return pd.DataFrame(results)
+
+# Run and report
+if __name__ == "__main__":
+    report = MatchConfirm()
+    report.to_csv("data/match_report.csv", index=False)
+    matched = report[report["status"] == "Matched"]
+    print(f" {len(matched)} of {len(report)} files matched successfully.")
