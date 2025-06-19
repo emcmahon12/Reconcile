@@ -11,6 +11,8 @@ Thoughts on next steps:
 
 6/17/202- Got my wisdom teeth out so have been slightly MIA on this project- trying to make the synthetic data more realaistic- barring that my fake trade form is from 1998. Got more symbols and realistic prcing into into the fake data- need to mess with the yahoo query error as well as the recon simulation
 
+6/19/2025- Teeth still hurting, added so many comments to this project. Also added more controllable randomness to the error. Added in a way to get some metrics out of this matching. Will work on more testing tommorrow.
+
 
 
 Sources:

@@ -3,9 +3,7 @@ import os
 import pandas as pd
 import re
 from difflib import get_close_matches
-from datetime import datetime
-#stuff including difflib, fpdf and fitz was chatGPT helped TODO: cite/document better which was which
-from fpdf import FPDF
+#stuff including difflib and fitz was chatGPT helped TODO: cite/document better which was which
 import fitz  
 
 # load internal
@@ -13,6 +11,10 @@ InternalData = pd.read_csv("data/internal_trades.csv")
 
 # Helper to extract trade fields from a confirmation PDF
 def DataExtract(filepath):
+    """
+   Takes in a file and, extracts  trade details from a PDF confirmation file using regex. Returns 
+   a dictionary with the needed trade details
+    """
     doc = fitz.open(filepath)
     text = ""
     for page in doc:
@@ -21,6 +23,7 @@ def DataExtract(filepath):
     trade = {}
 
     # Use regex to extract values from known structure
+    #cite note chatgpt helped with regex
     trade['TradeID'] = re.search(r"Trade ID:\s*(\w+)", text).group(1)
     trade['timestamp'] = re.search(r"Trade Date:\s*([^\n]+)", text).group(1)
     trade['style'] = re.search(r"Option Style:\s*(\w+)", text).group(1)
@@ -30,9 +33,21 @@ def DataExtract(filepath):
     trade['price'] = float(re.search(r"Strike Price:\s*\$(\d+\.\d+)", text).group(1))
 
     return trade
+
 #this is a helper function 
 # find best match in internal data with tolerance
 def InternalMatch(CurrentTrade, quantityTolerance=3, priceTolerance=2.0):
+    """
+    Takes in a trade, and tolerances, attempts to find a trade that matches in the internal data. Uses the trade dict
+    made in DataExtract.
+
+    Matching is done through:
+    Fuzzy symbol matching (difflib.get_close_matches) (ML technique for similar mataches in symbols ie APL and APPL)
+    Exact match on option style and type. (most obvious)
+    Tolerance matching on quantity and price (tiny price errors or quantity errors)
+
+    Returns a tuple with the matching record held as a dict and a status message saying match or no
+    """
     # Fuzzy match on symbol
     symbolMatches = get_close_matches(CurrentTrade['symbol'], InternalData['symbol'].unique(), n=3, cutoff=0.7)
     if not symbolMatches:
@@ -40,11 +55,11 @@ def InternalMatch(CurrentTrade, quantityTolerance=3, priceTolerance=2.0):
 
     for symbol in symbolMatches:
         possibleMatches = InternalData[
-            (InternalData['symbol'] == symbol) &
-            (InternalData['style'] == CurrentTrade['style']) &
-            (InternalData['typeOption'] == CurrentTrade['TypeOption']) &
-            (abs(InternalData['quantity'] - CurrentTrade['quantity']) <= quantityTolerance) &
-            (abs(InternalData['price'] - CurrentTrade['price']) <= priceTolerance)
+            (InternalData['symbol'] == symbol) & #mataching on fuzzy symbol
+            (InternalData['style'] == CurrentTrade['style']) & #exact match for option styles
+            (InternalData['typeOption'] == CurrentTrade['TypeOption']) & #exact for option type
+            (abs(InternalData['quantity'] - CurrentTrade['quantity']) <= quantityTolerance) & #quanity within tol
+            (abs(InternalData['price'] - CurrentTrade['price']) <= priceTolerance) #price within tol
         ]
         if not possibleMatches.empty:
             return possibleMatches.iloc[0].to_dict(), "Matched"
@@ -54,6 +69,10 @@ def InternalMatch(CurrentTrade, quantityTolerance=3, priceTolerance=2.0):
 
 # match all confirmation PDFs
 def MatchConfirm(ConfirmFolder="confirmations/external"):
+    """
+    Takes in a folder, processes all the folder, extracts trade data from each,
+    and attempts to match. Essentially running all above. Returns a pd df with results.
+    """
     results = []
     for filename in os.listdir(ConfirmFolder):
         if not filename.endswith(".pdf"):
@@ -63,12 +82,26 @@ def MatchConfirm(ConfirmFolder="confirmations/external"):
         try:
             extracted = DataExtract(filepath)
             match, status = InternalMatch(extracted)
+
+            # Extract ground truth InternalNum from filename (e.g., '00042.pdf' -> 42)
+            true_internal_num = int(filename.replace(".pdf", ""))
+            
+            # Determine if match was correct
+            matched_correctly = (
+                match is not None and 
+                'InternalNum' in match and 
+                int(match['InternalNum']) == true_internal_num
+            )
+
             results.append({
                 "filename": filename,
                 "TradeID": extracted["TradeID"],
                 "symbol": extracted["symbol"],
                 "matched_symbol": match['symbol'] if match else None,
-                "status": status
+                "matched_internal_num": match["InternalNum"] if match else None,
+                "true_internal_num": true_internal_num,
+                "status": status,
+                "matched_correctly": matched_correctly
             })
         except Exception as e:
             results.append({
@@ -76,7 +109,10 @@ def MatchConfirm(ConfirmFolder="confirmations/external"):
                 "TradeID": "N/A",
                 "symbol": "N/A",
                 "matched_symbol": None,
-                "status": f"Error: {e}"
+                "matched_internal_num": None,
+                "true_internal_num": None,
+                "status": f"Error: {e}",
+                "matched_correctly": False
             })
 
     return pd.DataFrame(results)
@@ -85,5 +121,9 @@ def MatchConfirm(ConfirmFolder="confirmations/external"):
 if __name__ == "__main__":
     report = MatchConfirm()
     report.to_csv("data/match_report.csv", index=False)
+
     matched = report[report["status"] == "Matched"]
+    CorrectMatches = report[report["matched_correctly"] == True]
+
     print(f" {len(matched)} of {len(report)} files matched successfully.")
+    print(f"True Matching Accuracy: {len(CorrectMatches) / len(report):.2%}")

@@ -1,101 +1,101 @@
 timestamp,symbol,quantity,price,style,typeOption,stockName,stockSector,marketCap,InternalNum
-2025-06-16 21:33:48.096249,BAC,28,45.62,American,Call,Bank of America Corporation,Financial Services,333135052800,0
-2025-06-17 11:45:48.827343,AVGO,754,249.4,European,Call,Broadcom Inc.,Technology,1172904345600,1
-2025-06-16 23:13:49.356674,GGLD,32,107.61,European,Call,"Gilead Sciences, Inc.",Healthcare,134344441856,2
-2025-06-17 11:55:49.797697,ED,518,102.00999999999999,European,Call,"Consolidated Edison, Inc.",Utilities,36515999744,3
-2025-06-16 21:12:50.265650,PKG,561,187.96,American,Call,Packaging Corporation of Americ,Consumer Cyclical,16767773696,4
-2025-06-17 04:03:50.729869,MMC,284,215.65,European,Call,"Marsh & McLennan Companies, Inc",Financial Services,106444029952,5
-2025-06-16 19:33:51.217891,GILD,348,107.15,American,Call,"Gilead Sciences, Inc.",Healthcare,134344441856,6
-2025-06-17 12:02:51.584563,WDC,783,59.0,American,Call,Western Digital Corporation,Technology,20433784832,7
-2025-06-17 16:13:52.092053,FITZ,100,37.88,American,Put,Fifth Third Bancorp,Financial Services,25438119936,8
-2025-06-16 22:46:52.592775,DHR,830,196.69,European,Put,Danaher Corporation,Healthcare,140092407808,9
-2025-06-17 01:04:54.060044,BIIB,997,126.56,American,Call,Biogen Inc.,Healthcare,18544582656,10
-2025-06-17 00:32:54.515293,DPZ,850,458.78,American,Call,Domino's Pizza Inc,Consumer Cyclical,15709315072,11
-2025-06-17 17:00:54.948892,AMCR,678,9.07,European,Put,Amcor plc,Consumer Cyclical,20782452736,12
-2025-06-17 16:39:55.370360,TEL,239,163.66,European,Put,TE Connectivity plc,Technology,48532885504,13
-2025-06-17 09:53:55.782386,HD,651,348.78,American,Call,"Home Depot, Inc. (The)",Consumer Cyclical,347010990080,14
-2025-06-17 06:44:56.235999,EXC,215,42.39,American,Call,Exelon Corporation,Utilities,42794397696,15
-2025-06-16 22:35:56.728568,MNST,176,62.78,European,Call,Monster Beverage Corporation,Consumer Defensive,61225943040,16
-2025-06-17 03:36:57.874511,FITB,277,38.11,European,Put,Fifth Third Bancorp,Financial Services,25438119936,17
-2025-06-17 17:28:58.166169,CAG,842,21.55,European,Put,"ConAgra Brands, Inc.",Consumer Defensive,10287150080,18
-2025-06-17 05:41:58.611258,DVA,68,136.51,European,Put,DaVita Inc.,Healthcare,10317016064,19
-2025-06-17 12:07:59.055272,NWSA,512,27.76,American,Put,News Corporation,Communication Services,16449771520,20
-2025-06-17 14:30:59.509510,DHR,143,195.75,European,Put,Danaher Corporation,Healthcare,140092407808,21
-2025-06-16 23:25:59.842435,GDDY,920,178.04,American,Put,GoDaddy Inc.,Technology,25368561664,22
-2025-06-17 11:54:00.252153,BMY,522,47.23,American,Call,Bristol-Myers Squibb Company,Healthcare,96116826112,23
-2025-06-17 17:47:00.802228,TSLA,113,316.35,European,Call,"Tesla, Inc.",Consumer Cyclical,1018950713344,24
-2025-06-16 20:10:01.211315,GILD,611,108.0,European,Put,"Gilead Sciences, Inc.",Healthcare,134344441856,25
-2025-06-17 06:22:01.611871,MTCH,480,30.27,American,Call,"Match Group, Inc.",Unknown,7422960640,26
-2025-06-16 20:10:02.768765,PFE,118,24.0,American,Put,"Pfizer, Inc.",Healthcare,136448876544,27
-2025-06-17 15:35:03.277573,DPZ,446,458.78,European,Put,Domino's Pizza Inc,Consumer Cyclical,15709315072,28
-2025-06-17 19:17:04.314519,WELL,740,151.87,American,Call,Welltower Inc.,Real Estate,99315687424,29
-2025-06-17 02:04:04.789130,VLTO,109,97.44,American,Call,Veralto Corp,Industrials,24151576576,30
-2025-06-17 14:10:05.228870,FRT,781,95.19,European,Call,Federal Realty Investment Trust,Real Estate,8268956160,31
-2025-06-16 22:57:06.538415,ELV,501,375.19,European,Call,"Elevance Health, Inc.",Healthcare,84768555008,32
-2025-06-17 07:00:07.170180,TDG,852,1425.38,American,Call,Transdigm Group Incorporated,Industrials,80059457536,33
-2025-06-17 17:25:07.597902,CPRT,900,48.0,European,Call,"Copart, Inc.",Industrials,46412926976,34
-2025-06-17 02:48:08.098604,SNA,71,307.28,European,Call,Snap-On Incorporated,Industrials,16067978240,35
-2025-06-16 20:52:08.770174,IEX,970,175.99,European,Put,IDEX Corporation,Industrials,13295094784,36
-2025-06-17 01:23:09.219683,TKO,622,167.96,American,Call,"TKO Group Holdings, Inc.",Unknown,13730311168,37
-2025-06-17 00:59:10.556390,PHM,748,98.72,European,Put,"PulteGroup, Inc.",Consumer Cyclical,19786153984,38
-2025-06-17 05:46:11.011548,NOC,666,503.97,American,Put,Northrop Grumman Corporation,Industrials,72535392256,39
-2025-06-17 01:44:11.479574,HOLX,124,64.14,European,Call,"Hologic, Inc.",Healthcare,14293277696,40
-2025-06-17 17:12:11.879048,EQIX,22,886.76,European,Call,"Equinix, Inc.",Real Estate,86741975040,41
-2025-06-17 19:09:12.316181,AON,725,350.81,European,Call,Aon plc,Financial Services,75753914368,42
-2025-06-17 17:05:13.972750,UNH,33,308.87,American,Call,UnitedHealth Group Incorporated,Healthcare,280188321792,43
-2025-06-17 01:51:14.451588,CEG,286,305.7,American,Call,Constellation Energy Corporatio,Utilities,95811575808,44
-2025-06-17 00:59:15.769426,BA,741,200.26,American,Call,Boeing Company (The),Unknown,150997237760,45
-2025-06-17 03:15:17.201203,SPG,417,157.13,European,Call,"Simon Property Group, Inc.",Real Estate,59259854848,46
-2025-06-17 16:05:17.719245,NEE,442,71.86,American,Put,"NextEra Energy, Inc.",Unknown,147933151232,47
-2025-06-17 05:22:18.877626,HUM,885,241.45,European,Call,Humana Inc.,Healthcare,29141323776,48
-2025-06-17 17:19:19.368469,IT,746,404.68,American,Call,"Gartner, Inc.",Technology,31146962944,49
-2025-06-17 10:54:20.922412,CHTR,195,373.62,American,Call,"Charter Communications, Inc.",Communication Services,51609624576,50
-2025-06-17 04:59:21.325442,CNC,286,54.91,American,Call,Centene Corporation,Healthcare,27323381760,51
-2025-06-17 16:49:21.712807,HSIC,828,70.16,European,Call,"Henry Schein, Inc.",Healthcare,8770351104,52
-2025-06-16 21:08:22.105500,KKR,857,121.06,European,Call,KKR & Co. Inc.,Financial Services,112005914624,53
-2025-06-17 11:19:22.579943,KMX,417,64.43,American,Put,CarMax Inc,Consumer Cyclical,9814944768,54
-2025-06-17 12:06:22.983259,TPL,411,1087.6,European,Call,Texas Pacific Land Corporation,Energy,25000986624,55
-2025-06-17 06:27:23.402379,AOS,400,63.23,American,Put,A.O. Smith Corporation,Unknown,8985551872,56
-2025-06-17 09:39:24.929761,GILD,714,108.0,American,Call,"Gilead Sciences, Inc.",Healthcare,134344441856,57
-2025-06-17 12:55:26.053649,DASH,223,219.39,European,Call,"DoorDash, Inc.",Consumer Cyclical,92965199872,58
-2025-06-17 08:41:27.155352,AWK,52,140.92,American,Call,"American Water Works Company, I",Utilities,27481090048,59
-2025-06-17 17:27:27.661517,WY,521,25.87,European,Call,Weyerhaeuser Company,Real Estate,18762813440,60
-2025-06-17 17:03:28.111908,MA,70,569.45,European,Put,Mastercard Incorporated,Financial Services,517107286016,61
-2025-06-17 15:18:28.520283,DIS,912,118.13,European,Call,Walt Disney Company (The),Communication Services,212368211968,62
-2025-06-16 22:15:29.010329,APTV,430,67.6,American,Put,Aptiv PLC,Consumer Cyclical,14718547968,63
-2025-06-17 12:25:29.453729,NTRS,734,109.63,American,Call,Northern Trust Corporation,Financial Services,21327310848,64
-2025-06-17 10:20:29.944047,FOX,135,49.63,American,Put,Fox Corporation,Communication Services,23264260096,65
-2025-06-17 08:36:30.352743,VST,770,177.75,European,Call,Vistra Corp.,Utilities,60316262400,66
-2025-06-17 03:45:30.769971,MAA,577,148.99,European,Call,Mid-America Apartment Communiti,Real Estate,17896382464,67
-2025-06-17 01:02:32.141453,CLX,519,122.1,American,Call,Clorox Company (The),Consumer Defensive,15049191424,68
-2025-06-17 07:29:32.657135,TRMB,71,71.76,European,Put,Trimble Inc.,Technology,17121004544,69
-2025-06-17 09:40:33.831540,CZR,449,26.45,American,Call,"Caesars Entertainment, Inc.",Unknown,5500753920,70
-2025-06-16 20:36:35.166080,SOLV,568,72.76,American,Call,Solventum Corporation,Healthcare,12588425216,71
-2025-06-17 14:48:35.628720,DHR,119,195.75,European,Call,Danaher Corporation,Healthcare,140092407808,72
-2025-06-17 10:06:36.004909,DXCM,620,81.83,European,Put,"DexCom, Inc.",Healthcare,32086116352,73
-2025-06-17 12:27:36.375989,OXY,650,45.98,American,Put,Occidental Petroleum Corporatio,Energy,45250433024,74
-2025-06-17 10:49:36.804860,UNH,930,308.87,European,Call,UnitedHealth Group Incorporated,Healthcare,280188321792,75
-2025-06-16 21:44:37.197495,GILD,850,108.0,American,Call,"Gilead Sciences, Inc.",Healthcare,134344441856,76
-2025-06-17 19:16:37.546781,EPAM,790,168.58,European,Put,"EPAM Systems, Inc.",Technology,9550512128,77
-2025-06-17 13:53:38.996514,PG,453,158.52,American,Call,Procter & Gamble Company (The),Consumer Defensive,371656491008,78
-2025-06-17 15:34:39.478479,APO,968,132.36,European,Call,"Apollo Global Management, Inc. ",Financial Services,75642945536,79
-2025-06-17 06:47:39.907695,MPC,566,170.08,European,Put,Marathon Petroleum Corporation,Energy,52250959872,80
-2025-06-17 15:02:40.332125,MO,316,58.99,American,Call,"Altria Group, Inc.",Consumer Defensive,99365707776,81
-2025-06-17 07:11:40.810827,C,699,77.36,European,Call,"Citigroup, Inc.",Financial Services,144487596032,82
-2025-06-17 07:19:41.251395,RVTY,574,94.16,American,Call,"Revvity, Inc.",Healthcare,11098639360,83
-2025-06-17 11:19:41.710866,TPL,167,1087.6,European,Put,Texas Pacific Land Corporation,Energy,25000986624,84
-2025-06-17 18:33:42.089055,CDW,755,170.8,American,Put,CDW Corporation,Technology,22491797504,85
-2025-06-16 20:32:42.490964,TPL,753,1087.6,European,Put,Texas Pacific Land Corporation,Energy,25000986624,86
-2025-06-17 13:57:42.743329,ROST,719,129.05,European,Put,"Ross Stores, Inc.",Consumer Cyclical,42208514048,87
-2025-06-17 18:04:44.457676,TER,482,86.43,European,Call,"Teradyne, Inc.",Technology,13865100288,88
-2025-06-17 03:41:44.870777,EVRG,313,66.74,European,Call,"Evergy, Inc.",Utilities,15356273664,89
-2025-06-17 18:35:45.551321,NEE,198,71.86,American,Put,"NextEra Energy, Inc.",Unknown,147933151232,90
-2025-06-17 09:53:46.720342,TPL,72,1087.6,American,Put,Texas Pacific Land Corporation,Energy,25000986624,91
-2025-06-16 21:30:48.680766,JBHT,410,139.09,American,Call,"J.B. Hunt Transport Services, I",Unknown,13796976640,92
-2025-06-17 15:27:49.959453,TDG,994,1425.38,American,Call,Transdigm Group Incorporated,Industrials,80059457536,93
-2025-06-16 23:34:50.328365,WSM,272,156.93,European,Call,"Williams-Sonoma, Inc.",Consumer Cyclical,19302074368,94
-2025-06-16 23:02:51.659199,HIG,354,125.53,American,Put,"The Hartford Insurance Group, I",Financial Services,35663450112,95
-2025-06-16 22:42:52.751417,JBL,119,196.89,American,Call,Jabil Inc.,Technology,21135157248,96
-2025-06-17 10:42:53.171211,AMZN,726,214.82,American,Call,"Amazon.com, Inc.",Consumer Cyclical,2280615051264,97
-2025-06-17 01:39:54.259575,VICI,826,32.32,European,Put,VICI Properties Inc.,Real Estate,34152867840,98
-2025-06-17 04:40:55.507525,ANSS,972,336.79,American,Put,"ANSYS, Inc.",Technology,29609263104,99
+2025-06-18 17:42:54.222803,ADM,680,355.41,American,Call,Unknown,Unknown,,83
+2025-06-18 21:50:05.890402,CLX,136,555.3,American,Call,Unknown,Unknown,,53
+2025-06-19 08:35:20.162466,AKAM,409,694.03,American,Put,Unknown,Unknown,,70
+2025-06-19 09:42:59.232650,DASH,60,293.45,European,Put,Unknown,Unknown,,45
+2025-06-19 06:26:58.571431,GILD,749,726.93,American,Call,Unknown,Unknown,,44
+2025-06-19 09:38:54.804940,SCHW,144,582.66,American,Call,Unknown,Unknown,,39
+2025-06-18 18:18:39.376366,EQR,446,200.4,European,Put,Unknown,Unknown,,22
+2025-06-19 02:20:27.603205,LHX,312,850.35,American,Call,Unknown,Unknown,,80
+2025-06-19 08:14:30.390832,TXT,285,190.9,American,Put,Unknown,Unknown,,10
+2025-06-18 18:21:21.244645,BAC,282,122.51,European,Call,Unknown,Unknown,,0
+2025-06-18 20:15:36.191586,FCX,142,425.8,American,Call,Unknown,Unknown,,18
+2025-06-19 08:57:47.474680,VST,748,585.37,European,Put,Unknown,Unknown,,30
+2025-06-19 14:53:22.275680,BKR,354,636.91,American,Put,Unknown,Unknown,,73
+2025-06-19 15:56:49.610106,AON,61,737.06,European,Call,Unknown,Unknown,,33
+2025-06-19 00:20:58.962701,NSC,573,578.02,American,Put,Unknown,Unknown,,90
+2025-06-19 15:57:25.335937,QCOM,715,825.24,American,Put,Unknown,Unknown,,4
+2025-06-19 01:28:24.593247,ANSS,941,953.99,American,Put,Unknown,Unknown,,76
+2025-06-18 17:33:25.377125,TPR,922,212.16,American,Put,Unknown,Unknown,,77
+2025-06-18 19:23:32.094205,MNST,747,254.02,European,Call,Unknown,Unknown,,12
+2025-06-19 02:33:48.177717,NOC,449,684.89,American,Call,Unknown,Unknown,,31
+2025-06-18 17:24:07.859732,SOLV,955,599.14,European,Call,Unknown,Unknown,,55
+2025-06-19 01:41:57.617637,KO,979,258.3,American,Call,Unknown,Unknown,,88
+2025-06-18 23:30:43.575882,A,372,200.68,American,Call,Unknown,Unknown,,26
+2025-06-19 08:06:57.057060,KMX,493,465.77,European,Put,Unknown,Unknown,,42
+2025-06-19 09:23:19.447247,SOLV,359,926.61,American,Call,Unknown,Unknown,,69
+2025-06-19 07:02:34.050554,APH,966,289.88,American,Call,Unknown,Unknown,,15
+2025-06-19 06:40:55.436964,HWM,946,324.83,European,Put,Unknown,Unknown,,40
+2025-06-19 08:19:03.341317,FE,724,724.55,European,Call,Unknown,Unknown,,96
+2025-06-19 13:48:29.519995,AMCR,792,693.93,American,Call,Unknown,Unknown,,9
+2025-06-19 15:15:21.579313,BDX,268,889.33,European,Put,Unknown,Unknown,,72
+2025-06-19 10:37:31.173544,FICO,687,419.74,American,Call,Unknown,Unknown,,11
+2025-06-18 22:51:00.877638,APTV,71,866.21,European,Call,Unknown,Unknown,,47
+2025-06-19 15:21:55.661528,AMCR,487,320.36,European,Put,Unknown,Unknown,,85
+2025-06-18 23:35:45.934314,SNA,779,162.29,European,Call,Unknown,Unknown,,28
+2025-06-18 18:27:01.282466,DELL,534,787.61,American,Call,Unknown,Unknown,,93
+2025-06-19 06:41:26.240000,CDNS,782,293.78,American,Call,Unknown,Unknown,,5
+2025-06-19 10:09:17.235297,TRMB,184,471.06,American,Put,Unknown,Unknown,,66
+2025-06-18 19:00:16.558130,PEG,953,239.1,European,Call,Unknown,Unknown,,65
+2025-06-18 17:20:50.872731,PODD,136,292.81,American,Call,Unknown,Unknown,,35
+2025-06-18 17:48:34.666313,ISRG,937,456.07,American,Call,Unknown,Unknown,,16
+2025-06-18 19:03:02.646519,APTV,598,477.3,American,Put,Unknown,Unknown,,49
+2025-06-19 15:06:50.222212,TSLA,527,397.39,European,Put,Unknown,Unknown,,34
+2025-06-19 14:42:28.234036,PNW,128,513.48,American,Call,Unknown,Unknown,,7
+2025-06-19 04:45:02.589392,EW,86,903.72,European,Call,Unknown,Unknown,,95
+2025-06-19 14:12:45.283625,CPRT,970,890.21,European,Call,Unknown,Unknown,,27
+2025-06-19 14:34:36.953291,TSLA,643,198.68,European,Put,Unknown,Unknown,,19
+2025-06-19 01:31:28.268543,ROP,671,621.99,American,Put,Unknown,Unknown,,81
+2025-06-19 10:57:41.855585,FRT,553,786.26,European,Put,Unknown,Unknown,,25
+2025-06-19 03:35:14.202454,MPC,441,597.27,European,Call,Unknown,Unknown,,62
+2025-06-19 00:24:32.811889,FITB,950,342.95,European,Put,Unknown,Unknown,,13
+2025-06-18 22:51:40.686338,VLTO,641,195.77,American,Call,Unknown,Unknown,,24
+2025-06-18 18:00:24.722692,PKG,231,590.45,American,Put,Unknown,Unknown,,3
+2025-06-19 07:08:35.575978,AVGO,575,321.96,American,Put,Unknown,Unknown,,17
+2025-06-19 14:06:54.078489,IT,820,755.39,European,Call,Unknown,Unknown,,38
+2025-06-18 21:20:28.927548,DPZ,634,846.46,American,Call,Unknown,Unknown,,8
+2025-06-18 17:26:26.064601,GEV,714,391.34,American,Call,Unknown,Unknown,,78
+2025-06-19 13:01:27.509062,FITB,868,187.04,American,Put,Unknown,Unknown,,6
+2025-06-19 09:01:15.730987,NXPI,106,324.58,American,Put,Unknown,Unknown,,64
+2025-06-19 00:02:52.519047,SPG,97,466.35,European,Put,Unknown,Unknown,,36
+2025-06-18 21:10:58.296326,CSGP,129,925.72,American,Call,Unknown,Unknown,,89
+2025-06-19 07:10:08.587224,BDX,761,900.74,European,Put,Unknown,Unknown,,56
+2025-06-18 23:56:05.858611,ABBV,306,948.47,American,Put,Unknown,Unknown,,99
+2025-06-19 07:51:06.811946,FICO,451,356.49,American,Call,Unknown,Unknown,,54
+2025-06-19 14:10:57.816267,CAH,400,441.08,American,Put,Unknown,Unknown,,43
+2025-06-19 09:13:03.748240,NTRS,245,744.57,American,Put,Unknown,Unknown,,50
+2025-06-18 17:20:18.178760,TPL,255,761.55,American,Call,Unknown,Unknown,,67
+2025-06-19 14:13:59.886031,AEP,515,625.76,European,Call,Unknown,Unknown,,46
+2025-06-18 16:15:18.789969,BKR,40,444.29,American,Call,Unknown,Unknown,,68
+2025-06-18 21:03:13.496212,MCN,968,200.69,European,Call,Unknown,Unknown,,61
+2025-06-19 02:03:03.993128,GEHE,478,397.79,American,Call,Unknown,Unknown,,97
+2025-06-19 09:39:26.912866,GPC,389,698.44,European,Put,Unknown,Unknown,,79
+2025-06-18 21:23:56.328586,ADP,554,145.53,European,Call,Unknown,Unknown,,41
+2025-06-18 22:56:11.210166,ICE,930,326.01,European,Call,Unknown,Unknown,,58
+2025-06-19 02:25:01.790608,BBY,584,947.44,European,Call,Unknown,Unknown,,48
+2025-06-19 09:09:05.230895,SYK,927,478.13,European,Put,Unknown,Unknown,,98
+2025-06-19 06:34:10.478249,MDT,352,289.57,European,Put,Unknown,Unknown,,57
+2025-06-19 14:41:23.500113,PARA,533,492.45,European,Put,Unknown,Unknown,,75
+2025-06-19 07:43:48.917785,CL,22,154.44,European,Call,Unknown,Unknown,,32
+2025-06-19 06:50:01.893076,DOC,293,169.74,European,Put,Unknown,Unknown,,94
+2025-06-18 18:32:12.048391,GILD,48,846.41,European,Put,Unknown,Unknown,,59
+2025-06-19 05:40:14.926050,XOM,816,909.08,European,Put,Unknown,Unknown,,63
+2025-06-19 08:10:54.964975,NCLH,826,379.38,European,Call,Unknown,Unknown,,84
+2025-06-19 04:05:53.254410,GILD,885,469.99,European,Call,Unknown,Unknown,,37
+2025-06-18 17:39:46.657092,IEX,170,952.16,American,Put,Unknown,Unknown,,29
+2025-06-19 11:25:22.269168,PPL,759,192.25,European,Put,Unknown,Unknown,,1
+2025-06-19 15:52:05.217859,HRL,577,659.04,European,Call,Unknown,Unknown,,52
+2025-06-18 21:17:38.448640,TSLA,702,948.19,European,Put,Unknown,Unknown,,21
+2025-06-19 15:05:24.089379,ALGN,239,184.33,European,Call,Unknown,Unknown,,2
+2025-06-19 16:04:40.090925,WELL,737,749.88,American,Call,Unknown,Unknown,,23
+2025-06-19 02:33:56.904704,GLW,705,232.81,European,Call,Unknown,Unknown,,87
+2025-06-18 19:17:59.619478,SNA,517,747.35,American,Put,Unknown,Unknown,,91
+2025-06-18 19:30:22.870288,JBL,922,204.08,European,Put,Unknown,Unknown,,74
+2025-06-19 02:03:56.241213,TYL,195,666.79,American,Put,Unknown,Unknown,,86
+2025-06-19 01:07:53.044054,HSIC,524,708.06,American,Call,Unknown,Unknown,,82
+2025-06-18 19:49:37.589459,AMGN,607,446.29,American,Put,Unknown,Unknown,,20
+2025-06-19 11:44:12.864055,MCV,166,981.82,American,Put,Unknown,Unknown,,60
+2025-06-19 13:49:20.860308,WDAY,360,795.99,American,Put,Unknown,Unknown,,71
+2025-06-19 14:16:33.425935,CAG,825,839.62,American,Put,Unknown,Unknown,,14
+2025-06-19 10:47:00.584631,PGR,461,875.35,American,Call,Unknown,Unknown,,92
+2025-06-19 11:43:04.500657,NOC,469,680.95,American,Call,Unknown,Unknown,,51
